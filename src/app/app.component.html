@@ -1,0 +1,18 @@
+<div>
+    <!-- Below is the section toolbar on the top and navigation bar on the right -->
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <h1 class="example-app-name" routerLink="" style="cursor: pointer;">Equitas</h1>
+    </mat-toolbar>
+
+    <mat-sidenav-container style="height: 100%;" class="example-sidenav-container">
+        <mat-sidenav #snav style="width: 13%;">
+            <mat-nav-list>
+                <app-navigation-panel></app-navigation-panel>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

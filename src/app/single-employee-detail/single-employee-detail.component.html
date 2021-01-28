@@ -1,0 +1,20 @@
+<div class="singleEmployee">
+    <button class="headBack" mat-raised-button routerLink="/employee">Head Back</button>
+    <!-- Employee id details -->
+    <span class="idText">ID: {{this.currentEmployee.id}}</span>
+    <div class="id"></div>
+    <!-- Employee employee name details -->
+    <span class="nameText">Name: {{this.currentEmployee.employee_name }}</span>
+    <div class="name"></div>
+    <!-- Employee salary details along with the angular inbuilt currency pipe-->
+    <span class="salaryText">Salary: {{this.salary | currency:'USD' }} </span>
+    <div class="salary"></div>
+    <!-- Employee age details using the custom pipe yearsOld.pipe.ts-->
+    <span class="ageText">Age: {{this.currentEmployee.employee_age | yearsOld}}</span>
+    <div class="age"></div>
+    <!-- Employee profile image  details -->
+    <span class="profileText">Profile Image: {{this.currentEmployee.profile_image}}</span>
+    <div class="profile"></div>
+</div>
+
+<!-- This the html for the single emplyee page details and has the images and text coded here -->

@@ -1,0 +1,94 @@
+/* applying style to table */
+
+table {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+
+/* making every odd row as silver in color */
+
+.mat-row:nth-child(odd) {
+    background-color: silver;
+}
+
+
+/* This is to change the colour of row when hover over it */
+
+.mat-row:hover {
+    background-color: lightslategray;
+}
+
+
+/* This is the animation applied to the entire page for zooming in enterance when loads, this animation runs for 0.5s */
+
+.scale-in-center {
+    padding: 1px;
+    padding-bottom: 260px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url('../../assets/employee.jpg');
+    background-repeat: no-repeat;
+    -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+/* These are the keyframes for the animation mentioned above */
+
+@-webkit-keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+    100% {
+        -webkit-transform: scale(1.25) translateY(-15px);
+        transform: scale(1.25) translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}
+
+@keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+    100% {
+        -webkit-transform: scale(1.25) translateY(-15px);
+        transform: scale(1.25) translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}

@@ -1,0 +1,22 @@
+<h4 style="text-decoration: underline;"> Enter your Login Credentials:-</h4>
+<form [formGroup]="profileForm">
+
+    <label>
+    Email Id:
+    <input type="text" formControlName="emailId" placeholder="Email Id" style="margin-left: 3%;">
+    <mat-error>{{EmailIdError}}</mat-error>
+  </label>
+    <br><br>
+    <label>
+    Password:
+    <input type="password" formControlName="password" placeholder="password">
+    <mat-error>{{PasswordError}}</mat-error>  
+  </label>
+    <br>
+    <button mat-raised-button color="primary" type="submit" (keydown.enter)="Submit()" (click)="Submit()" style="margin-top: 5%;
+    width: 28%;">Submit</button>
+    <button mat-raised-button color="primary" (click)="onNoClick()" style="margin-left: 3%; width: 28%;">Cancel</button>
+</form>
+
+<!-- This is the html for the login popup on the landing page that opens after you click on login button, this has mat error for error informing
+and takes values using reactive forms -->

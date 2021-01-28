@@ -1,0 +1,36 @@
+<div class="scale-in-center">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- The id column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef style="font-style: italic;color: white"> ID</th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+        <!-- The Employee Name column -->
+        <ng-container matColumnDef="employee_name">
+            <th mat-header-cell *matHeaderCellDef style="font-style: italic; color: white"> Employee Name </th>
+            <td mat-cell *matCellDef="let element" style="cursor:pointer;color: darkblue;" (click)="OpenEmployeeDetails(element)">
+                {{element.employee_name}} </td>
+        </ng-container>
+        <!-- The Employee Salary column -->
+        <ng-container matColumnDef="employee_salary">
+            <th mat-header-cell *matHeaderCellDef style="font-style: italic; color: white"> Employee Salary</th>
+            <td mat-cell *matCellDef="let element"> {{element.employee_salary}} </td>
+        </ng-container>
+        <!-- The  Employee Age column -->
+        <ng-container matColumnDef="employee_age">
+            <th mat-header-cell *matHeaderCellDef style="font-style: italic;color: white"> Employee Age </th>
+            <td mat-cell *matCellDef="let element"> {{element.employee_age}} </td>
+        </ng-container>
+        <!-- The Profile Image column -->
+        <ng-container matColumnDef="profile_image">
+            <th mat-header-cell *matHeaderCellDef style="font-style: italic;color: white"> Profile Image </th>
+            <td mat-cell *matCellDef="let element"> {{element.profile_image}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: #3f51b5"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons style="width: 80%;margin-left: 10%;">
+    </mat-paginator>
+
+</div>
